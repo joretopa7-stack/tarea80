@@ -1,0 +1,77 @@
+{
+  "tareas": [
+    {
+      "id": "1",
+      "titulo": "Tarea1",
+      "prioridad": "Alta",
+      "completada": false
+    },
+    {
+      "id": "2",
+      "titulo": "Tarea2",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "tnUSUvWGV8s",
+      "titulo": "Tarea mil",
+      "prioridad": "Baja",
+      "completada": true
+    },
+    {
+      "id": "wSxm9ZRvFuc",
+      "titulo": "Tarea mil",
+      "prioridad": "Baja",
+      "completada": true
+    },
+    {
+      "id": "G4V_GFLkOjQ",
+      "titulo": "Tarea mil",
+      "prioridad": "Baja",
+      "completada": true
+    },
+    {
+      "titulo": "Tarea 2mil",
+      "prioridad": "Alta",
+      "completada": true,
+      "id": "wPSNCavJI14"
+    },
+    {
+      "titulo": "Tarea 2mil",
+      "prioridad": "Alta",
+      "completada": true,
+      "id": "8vtQAlNt2Gc"
+    },
+    {
+      "titulo": "Tarea 3mil",
+      "prioridad": "Alta",
+      "completada": true,
+      "id": "KV2wkMzxYZA"
+    },
+    {
+      "id": "joKrRZdg7nE",
+      "titulo": "tarea10mil",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "lRBxNSBl_Tg",
+      "titulo": "TAREAJSJS",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "nGhGezD-jCM",
+      "titulo": "tratysrdytasdftyfasdytfdasty",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "CXFO4HFqDsw",
+      "titulo": "TareaCristian",
+      "prioridad": "Media",
+      "completada": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
