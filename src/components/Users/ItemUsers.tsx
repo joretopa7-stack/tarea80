@@ -1,62 +1,16 @@
-import type { IUser } from '../../interfaces/User'
-import {
-  FcOk
-} from 'react-icons/fc';
+import type { IUser } from '../../interfaces/User';
 
-// INTERFACE PARA RECIBIR CADA 
-// TAREA INDIVIDUAL
-interface ItemUserProp {
-  us: IUser
+interface ItemUserProps {
+  u: IUser;
 }
 
-export function ItemUser({ us }: ItemUserProp) {
-
+export const ItemUser = ({ u }: ItemUserProps) => {
   return (
-
-    <tr key={us.id}>
-
-      <td>
-        {us.id}
-      </td>
-
-      <td>
-        {us.nombre}
-      </td>
-
-      <td>
-        {us.email}
-      </td>
-      <td>
-        {us.rol}
-      </td>
-
-      
-      <td
-        style={{
-          backgroundColor:
-            "rgb(169, 168, 240)"
-        }}
-      >
-
-        {
-
-            <span
-              style={{
-                color: "green"
-              }}
-            >
-              <FcOk />
-            </span>
-
-            
-        }
-
-      </td>
-
+    <tr>
+      <td>{u.id}</td>
+      <td>{u.nombre}</td>
+      <td>{u.email}</td>
+      <td>{u.rol}</td>
     </tr>
-
-  )
-
-
-
-}
+  );
+};

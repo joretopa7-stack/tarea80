@@ -1,23 +1,39 @@
 import type { IUser } from '../../interfaces/User';
+import { ItemUser } from '../Users/ItemUsers';
 
-interface ListaUsersProp {
+interface ListaUsersProps {
   users: IUser[];
 }
 
-const ListaUsers = ({ users }: ListaUsersProp) => {
-  if (users.length === 0) {
-    return <p>No hay usuarios registrados.</p>;
-  }
-
+function ListaUsers({ users }: ListaUsersProps) {
   return (
-    <ul>
-      {users.map((u) => (
-        <li key={u.id}>
-          <strong>{u.nombre}</strong> — {u.email} — <em>{u.rol}</em>
-        </li>
-      ))}
-    </ul>
+    <section>
+      <h1>Lista de usuarios</h1>
+
+      <table className="tabla">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>email</th>
+            <th>rol</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {users.map((u) => (
+            <ItemUser key={u.id} u={u} />
+          ))}
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th>total de usuarios: {users.length}</th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
   );
-};
+}
 
 export default ListaUsers;

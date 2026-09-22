@@ -1,7 +1,8 @@
 import axios from 'axios';
 import type { IUser } from '../interfaces/User';
 
-const API_URL = 'http://localhost:3009/user';   // ← singular
+// La clave en db.json es "user" (singular)
+const API_URL = 'http://localhost:3009/users';
 
 export const getUserAxios = async (): Promise<IUser[]> => {
   const { data } = await axios.get<IUser[]>(API_URL);

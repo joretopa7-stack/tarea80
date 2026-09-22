@@ -11,6 +11,7 @@ const UsersPage = () => {
     const cargarDatos = async () => {
       try {
         const datos = await getUserAxios();
+        console.log('datos:', datos, 'esArray?', Array.isArray(datos));
         setMisUsers(datos);
       } catch (err) {
         console.error('Error cargando usuarios:', err);
