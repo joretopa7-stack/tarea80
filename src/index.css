@@ -117,8 +117,7 @@ label {
   margin: 0.9rem 0 0.35rem;
 }
 
-input[type="text"],
-input:not([type]),
+input:not([type="checkbox"]):not([type="radio"]),
 select {
   width: 100%;
   padding: 0.7rem 0.9rem;
@@ -254,12 +253,16 @@ hr {
   border-top: 1px solid #eef0f4;
   margin: 1.25rem 0;
 }
+
+/* ---------- INPUT CON ÍCONO (Nombre) ---------- */
 .input-icon {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.input-icon input {
+.input-icon input:not([type="checkbox"]):not([type="radio"]) {
   padding-left: 2.8rem;
 }
 
