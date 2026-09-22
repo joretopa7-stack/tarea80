@@ -1,38 +1,48 @@
-import {useState,useEffect} from 'react'
-import ListaUsers from '../components/Users/ListaUsers'
-import FormUsers from '../components/Users/FormUsers'
-import type { IUser } from '../interfaces/User'
-import { getAllUsers } from '../servicios/UserService'
+import { useState, useEffect } from 'react';
+import type { IUser, Rol } from '../interfaces/User';
+import ListaUsers from '../components/Users/ListaUsers';
+import FormUsers from '../components/Users/FormUsers';
+import { getUserAxios, crearUserAxios } from '../servicios/UserService';
 
-const UsersPage=()=> {
+const UsersPage = () => {
+  const [misUsers, setMisUsers] = useState<IUser[]>([]);
 
-    //definir el estado de 
-    //lista de usuarios
-    const [lUser, setLUser] = useState<IUser[]>([])
+  useEffect(() => {
+    const cargarDatos = async () => {
+      try {
+        const datos = await getUserAxios();
+        setMisUsers(datos);
+      } catch (err) {
+        console.error('Error cargando usuarios:', err);
+      }
+    };
+    cargarDatos();
+  }, []);
 
-    //useEffect:
-    //cargar los usuarios cuando
-    //renderiza la pagina
-    useEffect( () => {
-            //llamo al servicio
-        const cargarUsuarios = async() => {
-            const datos = await getAllUsers()
-            console.log(datos)
-            //establezco  el estado
-            //con estos datos
-            setLUser(datos)
-        }
-        cargarUsuarios()
-    } ,[])
+  const addUser = async (nombre: string, email: string, rol: Rol) => {
+    const nuevoUser: IUser = {
+      id: crypto.randomUUID(),
+      nombre,
+      email,
+      rol,
+    };
+
+    try {
+      const userCreado: IUser = await crearUserAxios(nuevoUser);
+      setMisUsers((prev) => [...prev, userCreado]);
+    } catch (err) {
+      console.error('Error creando usuario:', err);
+    }
+  };
 
   return (
     <>
-        <div>Pagina de usuarios</div>
-        <ListaUsers lu={lUser}/>
-        <FormUsers/>
+      <FormUsers addUser={addUser} />
+      <hr />
+      <h2>Lista de Usuarios</h2>
+      <ListaUsers users={misUsers} />
     </>
+  );
+};
 
-  )
-}
-
-export default UsersPage
+export default UsersPage;

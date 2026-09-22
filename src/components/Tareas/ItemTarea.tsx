@@ -6,66 +6,66 @@ import {
 
 // INTERFACE PARA RECIBIR CADA 
 // TAREA INDIVIDUAL
-interface ItemTareaProp{
-    t:Tarea
+interface ItemTareaProp {
+  t: Tarea
 }
 
-export function ItemTarea({t}: ItemTareaProp){
+export function ItemTarea({ t }: ItemTareaProp) {
 
-  return(
+  return (
 
-         <tr key={t.id}>
+    <tr key={t.id}>
 
-                  <td>
-                    {t.id}
-                  </td>
+      <td>
+        {t.id}
+      </td>
 
-                  <td>
-                    {t.titulo}
-                  </td>
+      <td>
+        {t.titulo}
+      </td>
 
-                  <td>
-                    {t.prioridad}
-                  </td>
+      <td>
+        {t.prioridad}
+      </td>
 
 
-                  {/* COMPLETADA */}
-                  <td
-                    style={{
-                      backgroundColor:
-                        "rgb(169, 168, 240)"
-                    }}
-                  >
+      {/* COMPLETADA */}
+      <td
+        style={{
+          backgroundColor:
+            "rgb(169, 168, 240)"
+        }}
+      >
 
-                    {
-                      t.completada === true
-                        ?
+        {
+          t.completada === true
+            ?
 
-                        <span
-                          style={{
-                            color: "green"
-                          }}
-                        >
-                          <FcOk />
-                        </span>
+            <span
+              style={{
+                color: "green"
+              }}
+            >
+              <FcOk />
+            </span>
 
-                        :
+            :
 
-                        <span
-                          style={{
-                            color: "red"
-                          }}
-                        >
-                          <FcCancel />
-                        </span>
-                    }
+            <span
+              style={{
+                color: "red"
+              }}
+            >
+              <FcCancel />
+            </span>
+        }
 
-                  </td>
+      </td>
 
-            </tr>
+    </tr>
 
   )
-  
-           
-  
+
+
+
 }

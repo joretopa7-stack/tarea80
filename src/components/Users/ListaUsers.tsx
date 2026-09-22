@@ -1,36 +1,23 @@
-import type { IUser } from "../../interfaces/User"
+import type { IUser } from '../../interfaces/User';
 
-interface ListaUsersProp{
-    lu:IUser[]
-
+interface ListaUsersProp {
+  users: IUser[];
 }
 
-const ListaUsers=({lu}:ListaUsersProp) => {
+const ListaUsers = ({ users }: ListaUsersProp) => {
+  if (users.length === 0) {
+    return <p>No hay usuarios registrados.</p>;
+  }
+
   return (
-    <>
-    <h2>Lista de Usuarios</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            {
-                lu.map((us:IUser)=>(
-                    <td>
-                        <tr>{us.nombre}</tr>
-                        <tr>{us.email}</tr>
-                    </td>
-                    
+    <ul>
+      {users.map((u) => (
+        <li key={u.id}>
+          <strong>{u.nombre}</strong> — {u.email} — <em>{u.rol}</em>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-                ))
-            }
-        </tbody>
-    </table>
-    </>
-  )
-}
-
-export default ListaUsers
+export default ListaUsers;

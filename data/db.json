@@ -71,20 +71,45 @@
       "titulo": "TareaCristian",
       "prioridad": "Media",
       "completada": false
-    }
-  ],
-  "user":[
-    {
-      "id":"1",
-      "nombre":"Chanti",
-      "email":"chan@gmail.com",
-      "rol":"Admin"
     },
     {
-      "id":"2",
-      "nombre":"Eddy",
-      "email":"Edd@gmail.com",
-      "rol":"Dev"
+      "id": "IIJDrK50OKw",
+      "titulo": "tarea1212",
+      "prioridad": "Media",
+      "completada": false
+    },
+    {
+      "id": "jzNgi41VpDI",
+      "titulo": "kmklmlkmk",
+      "prioridad": "Alta",
+      "completada": false
+    },
+    {
+      "id": "J4t4WHtfoZU",
+      "titulo": "",
+      "prioridad": "Alta",
+      "completada": false
+    },
+    {
+      "id": "RlHUk1DrbfQ",
+      "titulo": "popo",
+      "prioridad": "Alta",
+      "completada": false
     }
-  ]
+  ],
+  "user": [
+    {
+      "id": "1",
+      "nombre": "Chanti",
+      "email": "chan@gmail.com",
+      "rol": "Admin"
+    },
+    {
+      "id": "2",
+      "nombre": "Eddy",
+      "email": "Edd@gmail.com",
+      "rol": "Dev"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
