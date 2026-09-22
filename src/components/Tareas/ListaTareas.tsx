@@ -1,4 +1,4 @@
-import type { Tarea } from '../interfaces/Form'
+import type { Tarea } from '../../interfaces/Form'
 import { ItemTarea } from './ItemTarea'
 
 //crear una interface de prop

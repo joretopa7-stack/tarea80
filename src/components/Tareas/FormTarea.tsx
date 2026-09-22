@@ -1,6 +1,6 @@
 import {useState,type ChangeEvent,
   type  FormEvent }from 'react'
-import type {Formulario, Prioridad, Tarea}from '../interfaces/Form';
+import type {Formulario, Prioridad, Tarea}from '../../interfaces/Form';
 import {
   FcBusinessman,
   FcCheckmark

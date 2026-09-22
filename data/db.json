@@ -73,5 +73,18 @@
       "completada": false
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "user":[
+    {
+      "id":"1",
+      "nombre":"Chanti",
+      "email":"chan@gmail.com",
+      "rol":"Admin"
+    },
+    {
+      "id":"2",
+      "nombre":"Eddy",
+      "email":"Edd@gmail.com",
+      "rol":"Dev"
+    }
+  ]
 }
